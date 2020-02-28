@@ -22,7 +22,7 @@ RUN npm run build
 
 FROM nginx:1.15.2-alpine
 COPY --from=build /app/dist /var/www
-COPY --from=build /app/docker/nginx.conf /etc/nginx/nginx.conf
-COPY --from=build /app/docker/mime.types /etc/nginx/mime.types
+COPY --from=build /app/nginx/nginx.conf /etc/nginx/nginx.conf
+COPY --from=build /app/nginx/mime.types /etc/nginx/mime.types
 EXPOSE 80
 ENTRYPOINT ["nginx","-g","daemon off;"]
