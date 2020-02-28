@@ -3,7 +3,7 @@ version: '3.2'
 services:
   events-app-profile:
     build:
-      dockerfile: Dockerfile
+      dockerfile: docker/Dockerfile
       context: .
     restart: unless-stopped
     ports:
