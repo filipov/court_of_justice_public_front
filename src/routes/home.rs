@@ -16,6 +16,7 @@ impl Component for Home {
     fn view(&self) -> Html {
         html! {
             <div class="app">
+                {{ "Justice" }}
             </div>
         }
     }
