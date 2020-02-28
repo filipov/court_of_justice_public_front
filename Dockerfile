@@ -1,6 +1,6 @@
 FROM node:12 as build
 WORKDIR /app
-COPY .. .
+COPY . .
 ENV RUSTUP_HOME=/usr/local/rustup \
     CARGO_HOME=/usr/local/cargo \
     PATH=/usr/local/cargo/bin:$PATH \
